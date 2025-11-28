@@ -276,14 +276,26 @@ body {
   margin: 0;
 }
 
-/* 7) Debugging aid (remove after verifying) — comment out if not needed
-   Adds a faint outline so you can see which elements still have backgrounds.
-*/
-/*
-.container-main, .about-grid, .panel, .card-main {
-  outline: 1px dashed rgba(255,255,255,0.06) !important;
+.certificate-thumb {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
 }
-*/
+
+.certificate-btn {
+  margin-left: 6px;
+  padding: 2px 8px;
+  font-size: 0.78rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: transparent;
+  color: var(--text-color);
+}
+
+.certificate-btn:hover {
+  background: rgba(255,255,255,0.08);
+  color: var(--accent);
+}
 
   </style>
 
@@ -416,19 +428,52 @@ body {
           </div>
 
           <div class="mini-card">
-            <h5 style="margin-top:0">Certifications</h5>
-            <ul style="margin:8px 0 0 18px;">
-              <li>CS50x (Harvard University)</li>
-              <li>Spanish DELE A2 (Instituto Cervantes)</li>
-              <li>Postcolonial Literature (Indian Institute of Technology, Kanpur) </li>
-              <li>History of English Literature (Indian Institute of Technology, Madras) </li>
-              <li>The Popular Gothic Novel (Indian Institute of Technology, Madras)</li>
-              <li>Basics of Spanish Language and Culture (Indira Gandhi National Open University, New Delhi)</li>
-              <li>Introduction to Who Wrote Shakespeare (University of London) </li>
-              <li>Soren Kierkegaard – Subjectivity, Irony, and the Crisis of Modernity (University of Copenhagen) </li>
-                   
-            </ul>
-          </div>
+  <h5 style="margin-top:0">Certifications</h5>
+  <ul style="margin:8px 0 0 18px;">
+
+    <li>
+      CS50x (Harvard University)
+      <button class="certificate-btn" data-bs-toggle="modal" data-bs-target="#certCS50">View</button>
+    </li>
+
+    <li>
+      Spanish DELE A2 (Instituto Cervantes)
+      <button class="certificate-btn" data-bs-toggle="modal" data-bs-target="#certDELE">View</button>
+    </li>
+
+    <li>
+      Postcolonial Literature (IIT Kanpur)
+      <button class="certificate-btn" data-bs-toggle="modal" data-bs-target="#certPostcolonial">View</button>
+    </li>
+
+    <li>
+      History of English Literature (IIT Madras)
+      <button class="certificate-btn" data-bs-toggle="modal" data-bs-target="#certHistoryLit">View</button>
+    </li>
+
+    <li>
+      The Popular Gothic Novel (IIT Madras)
+      <button class="certificate-btn" data-bs-toggle="modal" data-bs-target="#certGothic">View</button>
+    </li>
+
+    <li>
+      Basics of Spanish Language & Culture (IGNOU)
+      <button class="certificate-btn" data-bs-toggle="modal" data-bs-target="#certIGNOU">View</button>
+    </li>
+
+    <li>
+      Who Wrote Shakespeare? (University of London)
+      <button class="certificate-btn" data-bs-toggle="modal" data-bs-target="#certShakespeare">View</button>
+    </li>
+
+    <li>
+      Kierkegaard – Subjectivity & Irony (University of Copenhagen)
+      <button class="certificate-btn" data-bs-toggle="modal" data-bs-target="#certKierkegaard">View</button>
+    </li>
+
+  </ul>
+</div>
+
 
           <div class="mini-card">
             <h5 style="margin-top:0">Publications & Projects</h5>
@@ -593,6 +638,129 @@ body {
     }
     @keyframes flashAnim { from { opacity: 0.8 } to { opacity: 0 } }
 </style>
+
+<!-- ===== Certificate Previews ===== -->
+
+<!-- CS50 -->
+<div class="modal fade" id="certCS50" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content glass-card">
+      <div class="modal-header">
+        <h5 class="modal-title">CS50x Certificate</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="certificates/cs50x.jpg" class="certificate-thumb" alt="CS50 Certificate">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DELE A2 -->
+<div class="modal fade" id="certDELE" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content glass-card">
+      <div class="modal-header">
+        <h5 class="modal-title">DELE A2 Certificate</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="certificates/dele_a2.jpg" class="certificate-thumb" alt="DELE Certificate">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Postcolonial Literature -->
+<div class="modal fade" id="certPostcolonial" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content glass-card">
+      <div class="modal-header">
+        <h5 class="modal-title">Postcolonial Literature Certificate</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="certificates/postcolonial.jpg" class="certificate-thumb">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- History of English Literature -->
+<div class="modal fade" id="certHistoryLit" tabindex="-1"> 
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content glass-card">
+      <div class="modal-header">
+        <h5 class="modal-title">History of English Literature Certificate</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="certificates/history_eng_lit.jpg" class="certificate-thumb">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Gothic Novel -->
+<div class="modal fade" id="certGothic" tabindex="-1"> 
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content glass-card">
+      <div class="modal-header">
+        <h5 class="modal-title">Popular Gothic Novel Certificate</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="certificates/gothic_novel.jpg" class="certificate-thumb">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- IGNOU Spanish -->
+<div class="modal fade" id="certIGNOU" tabindex="-1"> 
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content glass-card">
+      <div class="modal-header">
+        <h5 class="modal-title">IGNOU Spanish Certificate</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="certificates/ignou_spanish.jpg" class="certificate-thumb">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- London Shakespeare -->
+<div class="modal fade" id="certShakespeare" tabindex="-1"> 
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content glass-card">
+      <div class="modal-header">
+        <h5 class="modal-title">Who Wrote Shakespeare? Certificate</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="certificates/shakespeare.jpg" class="certificate-thumb">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Kierkegaard -->
+<div class="modal fade" id="certKierkegaard" tabindex="-1"> 
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content glass-card">
+      <div class="modal-header">
+        <h5 class="modal-title">Kierkegaard Certificate</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="certificates/kierkegaard.jpg" class="certificate-thumb">
+      </div>
+    </div>
+  </div>
+</div>
+
 
 </body>
 
